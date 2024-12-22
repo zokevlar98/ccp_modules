@@ -8,9 +8,11 @@
 class simple
 {
 	public :
+		int	num;
+
     	simple();
     	~simple();
-
+		void	member_f(void);
 };
 
 

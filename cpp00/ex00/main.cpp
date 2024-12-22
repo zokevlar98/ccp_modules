@@ -7,6 +7,8 @@
 int	main(void)
 {
 	simple	s;
+
+	// s.member_f();
 }
 
 // int	main()
