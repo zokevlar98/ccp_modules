@@ -16,9 +16,14 @@ public :
         this->age = age;
         this->name = name;
     }
+	//Copy constuctor
+	test(test& Test)
+	{
+		this->age = Test.age;
+		this->name = Test.name;
+	}
     ~test()
 	{
-
 	}
     void  get_name()
     {
@@ -28,13 +33,29 @@ public :
 	{
 		std::cout << "You Age is " << age <<std::endl;
 	}
-
+	std::string	set_name(const std::string name)
+	{
+		this->name = name;
+		return name;
+	}
+	int	set_age(const int	age)
+	{
+		this->age = age;
+		return age;
+	}
 };
 
 
 int main () {
     test tst(20, "Zokevlar");
+	test tst_Copy(tst);
 
     tst.get_name();
 	tst.get_age();
+
+	tst_Copy.set_name("ziad");
+	tst_Copy.set_age(23);
+	std::cout << "============================="<<std::endl;
+	tst_Copy.get_name();
+	tst_Copy.get_age();
 }
